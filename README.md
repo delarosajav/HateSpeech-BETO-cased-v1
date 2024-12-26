@@ -68,6 +68,7 @@ It achieves the following results on the *test set*:
 - per_device_train_batch_size: 8
 - per_device_eval_batch_size: 8
 - num_train_epochs: 4
+- optimizer: AdamW
 - weight_decay: 0.01
 - save_strategy: "epoch"
 - lr_scheduler_type: "linear"
