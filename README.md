@@ -31,29 +31,12 @@ tags:
 <!-- Provide a quick summary of what the model is/does. -->
 
 This model is fine-tuned version of [dccuchile/bert-base-spanish-wwm-cased](https://huggingface.co/dccuchile/bert-base-spanish-wwm-cased) for hate speech detection related to racism, homophobia, sexism, and other forms of discrimination in Spanish text.
-
-## Uses
-
-<!-- Address questions around how the model is intended to be used, including the foreseeable users of the model and those affected by the model. -->
+It is trained on the dataset [Paul/hatecheck-spanish](https://huggingface.co/Paul/hatecheck-spanish).
 
 
-## How to Get Started with the Model
+## Training Details and Procedure
 
-Use the code below to get started with the model.
 
-[More Information Needed]
-
-## Training Details
-
-### Training Data
-
-<!-- This should link to a Dataset Card, perhaps with a short stub of information on what the training data is all about as well as documentation related to data pre-processing or additional filtering. -->
-
-[More Information Needed]
-
-### Training Procedure
-
-<!-- This relates heavily to the Technical Specifications. Content here should link to that section when it is relevant to the training procedure. -->
 
 #### Preprocessing [optional]
 
