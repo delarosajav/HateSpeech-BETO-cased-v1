@@ -33,8 +33,9 @@ tags:
 This model is fine-tuned version of [dccuchile/bert-base-spanish-wwm-cased](https://huggingface.co/dccuchile/bert-base-spanish-wwm-cased) for hate speech detection related to racism, homophobia, sexism, and other forms of discrimination in Spanish text.
 It is trained on the dataset [Paul/hatecheck-spanish](https://huggingface.co/Paul/hatecheck-spanish).
 
+## Metrics and results:
 
-It achieves the following results on the evaluation set (last epoch):
+It achieves the following results on the *evaluation set* (last epoch):
 - 'eval_loss': 0.03607647866010666
 - 'eval_accuracy': 0.9933244325767691
 - 'eval_precision_per_label': [1.0, 0.9905123339658444]
@@ -48,7 +49,7 @@ It achieves the following results on the evaluation set (last epoch):
 - 'eval_steps_per_second': 53.578
 - 'epoch': 4.0
 
-It achieves the following results on the test set:
+It achieves the following results on the *test set*:
 - 'eval_loss': 0.052769944071769714
 - 'eval_accuracy': 0.9933244325767691
 - 'eval_precision_per_label': [0.9956140350877193, 0.9923224568138196]
@@ -58,7 +59,7 @@ It achieves the following results on the test set:
 - 'eval_recall_weighted': 0.9933244325767691
 - 'eval_f1_weighted': 0.993312254486016
 
-## Training Details and Procedure
+### Training Details and Procedure
 
 ## Main Hyperparameters:
 
@@ -77,7 +78,7 @@ It achieves the following results on the test set:
 #### Preprocessing and Postprocessing:
 
 - Needed to manually map dataset creating the different sets: train 60%, validation 20%, and test 20%.
-- Needed to manually map dataset's labels from str ("hateful", "non-hateful") to int (1,0), in order to properly create tensors.
+- Needed to manually map dataset's labels, from str ("hateful", "non-hateful") to int (1,0), in order to properly create tensors.
 - Dynamic Padding through DataCollator was used.
 
 
