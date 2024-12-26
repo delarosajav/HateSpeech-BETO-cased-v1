@@ -30,7 +30,7 @@ tags:
 
 <!-- Provide a quick summary of what the model is/does. -->
 
-This model is fine-tuned version of [dccuchile/bert-base-spanish-wwm-cased](https://huggingface.co/dccuchile/bert-base-spanish-wwm-cased) for hate speech detection related to racism, homophobia, sexism, and other forms of discrimination and hate in Spanish text.
+This model is fine-tuned version of [dccuchile/bert-base-spanish-wwm-cased](https://huggingface.co/dccuchile/bert-base-spanish-wwm-cased) for hate speech detection related to racism, homophobia, sexism, and other forms of discrimination in Spanish text.
 
 ## Uses
 
