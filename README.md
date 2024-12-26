@@ -34,119 +34,49 @@ This model is fine-tuned version of [dccuchile/bert-base-spanish-wwm-cased](http
 It is trained on the dataset [Paul/hatecheck-spanish](https://huggingface.co/Paul/hatecheck-spanish).
 
 
+It achieves the following results on the evaluation set (last epoch):
+- 'eval_loss': 0.03607647866010666
+- 'eval_accuracy': 0.9933244325767691
+- 'eval_precision_per_label': [1.0, 0.9905123339658444]
+- 'eval_recall_per_label': [0.9779735682819384, 1.0]
+- 'eval_f1_per_label': [0.9888641425389755, 0.9952335557673975]
+- 'eval_precision_weighted': 0.9933877681310691
+- 'eval_recall_weighted': 0.9933244325767691
+- 'eval_f1_weighted': 0.9933031728530427
+- 'eval_runtime': 1.7545
+- 'eval_samples_per_second': 426.913
+- 'eval_steps_per_second': 53.578
+- 'epoch': 4.0
+
+It achieves the following results on the test set:
+-'eval_loss': 0.052769944071769714
+-'eval_accuracy': 0.9933244325767691
+-'eval_precision_per_label': [0.9956140350877193, 0.9923224568138196]
+-'eval_recall_per_label': [0.9826839826839827, 0.9980694980694981]
+-'eval_f1_per_label': [0.9891067538126361, 0.9951876804619827]
+-'eval_precision_weighted': 0.9933376164683867
+-'eval_recall_weighted': 0.9933244325767691
+-'eval_f1_weighted': 0.993312254486016
+
 ## Training Details and Procedure
 
+Main Hyperparameters:
+- learning_rate: 1e-5
+- train_batch_size: 8
+- eval_batch_size: 18
+- optimizer: AdamW
+- lr_scheduler_type: linear
+- num_epochs: 4
 
 
-#### Preprocessing [optional]
+#### Preprocessing and Postprocessing [optional]
 
-[More Information Needed]
+-Needed to manually map dataset creating the different sets: train 60%, validation 20%, and test 20%
+-Needed to manually map dataset's labels from str ("hateful", "non-hateful") to int (1,0), in order to properly create tensors.
+-Dynamic Padding through DataCollator was used
 
-
-#### Training Hyperparameters
-
-- **Training regime:** [More Information Needed] <!--fp32, fp16 mixed precision, bf16 mixed precision, bf16 non-mixed precision, fp16 non-mixed precision, fp8 mixed precision -->
-
-#### Speeds, Sizes, Times [optional]
-
-<!-- This section provides information about throughput, start/end time, checkpoint size if relevant, etc. -->
-
-[More Information Needed]
-
-## Evaluation
-
-<!-- This section describes the evaluation protocols and provides the results. -->
-
-### Testing Data, Factors & Metrics
-
-#### Testing Data
-
-<!-- This should link to a Dataset Card if possible. -->
-
-[More Information Needed]
-
-#### Factors
-
-<!-- These are the things the evaluation is disaggregating by, e.g., subpopulations or domains. -->
-
-[More Information Needed]
-
-#### Metrics
-
-<!-- These are the evaluation metrics being used, ideally with a description of why. -->
-
-[More Information Needed]
-
-### Results
-
-[More Information Needed]
-
-#### Summary
-
-
-
-## Model Examination [optional]
-
-<!-- Relevant interpretability work for the model goes here -->
-
-[More Information Needed]
-
-## Environmental Impact
-
-<!-- Total emissions (in grams of CO2eq) and additional considerations, such as electricity usage, go here. Edit the suggested text below accordingly -->
-
-Carbon emissions can be estimated using the [Machine Learning Impact calculator](https://mlco2.github.io/impact#compute) presented in [Lacoste et al. (2019)](https://arxiv.org/abs/1910.09700).
-
-- **Hardware Type:** [More Information Needed]
-- **Hours used:** [More Information Needed]
-- **Cloud Provider:** [More Information Needed]
-- **Compute Region:** [More Information Needed]
-- **Carbon Emitted:** [More Information Needed]
-
-## Technical Specifications [optional]
-
-### Model Architecture and Objective
-
-[More Information Needed]
-
-### Compute Infrastructure
-
-[More Information Needed]
-
-#### Hardware
-
-[More Information Needed]
-
-#### Software
-
-[More Information Needed]
-
-## Citation [optional]
-
-<!-- If there is a paper or blog post introducing the model, the APA and Bibtex information for that should go in this section. -->
-
-**BibTeX:**
-
-[More Information Needed]
-
-**APA:**
-
-[More Information Needed]
-
-## Glossary [optional]
-
-<!-- If relevant, include terms and calculations in this section that can help readers understand the model or model card. -->
-
-[More Information Needed]
 
 ## More Information [optional]
 
-[More Information Needed]
-
-## Model Card Authors [optional]
-
-[More Information Needed]
-
-## Model Card Contact
-
-[More Information Needed]
+Fine-tuned by Javier de la Rosa Sánchez.
+javier.delarosa95@gmail.com
