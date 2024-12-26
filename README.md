@@ -83,7 +83,7 @@ It achieves the following results on the *test set*:
 - Dynamic Padding through DataCollator was used.
 
 
-## More Information [optional]
+## More Information
 
 - Fine-tuned by Javier de la Rosa Sánchez.
 - javier.delarosa95@gmail.com
